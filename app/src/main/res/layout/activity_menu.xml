@@ -18,24 +18,31 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Menu buttons -->
     <LinearLayout
-        android:padding="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.daniily000.android.hackyou.view.MenuButton
+            android:id="@+id/play_button"
             style="@style/MenuButtonStyle"
-            android:text="Play"/>
+            android:text="Play" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccentDark" />
 
         <com.daniily000.android.hackyou.view.MenuButton
+            android:id="@+id/leaderboards_button"
             style="@style/MenuButtonStyle"
-            android:text="Leaderboards"/>
-
+            android:text="Leaderboards" />
 
     </LinearLayout>
 
