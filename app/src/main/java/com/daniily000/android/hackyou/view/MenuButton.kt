@@ -1,7 +1,6 @@
 package com.daniily000.android.hackyou.view
 
 import android.content.Context
-import android.graphics.Color
 import android.util.AttributeSet
 import android.view.MotionEvent
 import com.daniily000.android.hackyou.R
@@ -24,15 +23,20 @@ class MenuButton(context: Context, attrs: AttributeSet) : android.support.v7.wid
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (event?.action == MotionEvent.ACTION_DOWN) {
-            setTextColor(highlightingColor)
-            return true
-        }
+        super.onTouchEvent(event)
 
-        if (event?.action == MotionEvent.ACTION_UP) {
-            setTextColor(defaultColor)
-            return true
+        when (event?.action) {
+            MotionEvent.ACTION_DOWN -> {
+                setTextColor(highlightingColor)
+                return true
+            }
+            MotionEvent.ACTION_UP -> {
+                setTextColor(defaultColor)
+                performClick()
+                return true
+            }
         }
         return false
     }
+
 }
