@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Hack You</string>
+    <string name="menu_play">Play</string>
+    <string name="wep">WEP</string>
+    <string name="wpa">WPA</string>
+    <string name="wpa_wps">WPA-WPS</string>
+    <string name="perk_blackout">Blackout</string>
+    <string name="perk_chems">Chems</string>
 </resources>
