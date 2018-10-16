@@ -44,4 +44,12 @@
         <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 
+    <style name="PerksTextStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 </resources>
