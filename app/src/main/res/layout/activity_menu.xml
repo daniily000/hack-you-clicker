@@ -40,7 +40,7 @@
         <com.daniily000.android.hackyou.view.MenuButton
             android:id="@+id/play_button"
             style="@style/MenuButtonStyle"
-            android:text="Play" />
+            android:text="@string/menu_play" />
 
         <View
             android:layout_width="match_parent"
@@ -50,7 +50,9 @@
         <!--com.daniily000.android.hackyou.view.MenuButton
             android:id="@+id/leaderboards_button"
             style="@style/MenuButtonStyle"
-            android:text="Leaderboards" /-->
+            android:text="Leaderboards" />
+
+            Implement later -->
 
     </LinearLayout>
 
