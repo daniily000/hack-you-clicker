@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hack You</string>
+    <string name="menu_play">Начать</string>
+    <string name="perk_blackout">Блэкаут</string>
+    <string name="perk_chems">Химы</string>
+    <string name="post_game_dialog_header">ГОТОВО</string>
+    <string name="post_game_dialog_label_name">"Хакермэн: "</string>
+    <string name="post_game_dialog_label_time">"Время: "</string>
+    <string name="post_game_dialog_label_pts">"Очки: "</string>
+    <string name="post_game_dialog_label_efficiency">"Эффективность: "</string>
+    <string name="post_game_dialog_button_restart">Заново</string>
+    <string name="post_game_dialog_button_finish">Выйти</string>
+    <string name="pre_game_dialog_header">Кто же этот хакермэн?</string>
+    <string name="pre_game_dialog_label_name">"Имя: "</string>
+    <string name="pre_game_dialog_label_time">"Время: "</string>
+    <string name="pre_game_dialog_button_start">Старт</string>
+</resources>

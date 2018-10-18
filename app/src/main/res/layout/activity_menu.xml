@@ -40,6 +40,7 @@
         <com.daniily000.android.hackyou.view.MenuButton
             android:id="@+id/play_button"
             style="@style/MenuButtonStyle"
+            android:onClick="launchGame"
             android:text="@string/menu_play" />
 
         <View

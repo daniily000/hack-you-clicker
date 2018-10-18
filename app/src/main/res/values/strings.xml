@@ -1,9 +1,20 @@
 <resources>
     <string name="app_name">Hack You</string>
     <string name="menu_play">Play</string>
-    <string name="wep">WEP</string>
-    <string name="wpa">WPA</string>
-    <string name="wpa_wps">WPA-WPS</string>
+    <string name="wep" translatable="false">WEP</string>
+    <string name="wpa" translatable="false">WPA</string>
+    <string name="wpa_wps" translatable="false">WPA-WPS</string>
     <string name="perk_blackout">Blackout</string>
     <string name="perk_chems">Chems</string>
+    <string name="post_game_dialog_header">DONE</string>
+    <string name="post_game_dialog_label_name">"Hackerman: "</string>
+    <string name="post_game_dialog_label_time">"Time: "</string>
+    <string name="post_game_dialog_label_pts">"Points: "</string>
+    <string name="post_game_dialog_label_efficiency">"Efficiency: "</string>
+    <string name="post_game_dialog_button_restart">Restart</string>
+    <string name="post_game_dialog_button_finish">Finish</string>
+    <string name="pre_game_dialog_header">Who is that hackerman?</string>
+    <string name="pre_game_dialog_label_name">"Name: "</string>
+    <string name="pre_game_dialog_label_time">"Time: "</string>
+    <string name="pre_game_dialog_button_start">Start</string>
 </resources>

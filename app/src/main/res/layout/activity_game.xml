@@ -31,6 +31,7 @@
 
     <!-- Timer: seconds -->
     <TextView
+        android:id="@+id/current_time_text_view"
         style="@style/TimerTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -38,16 +39,21 @@
     <!-- Progress of current hacking -->
     <ProgressBar
         android:id="@+id/hacking_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/frame" />
 
     <!-- PRESS TO HACK, MR. ANON -->
     <ImageView
         android:id="@+id/hackable_object_image_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
-        android:src="@mipmap/wifi"/>
+        android:onClick="hackTap"
+        android:src="@mipmap/wifi" />
 
     <!-- Current hack label -->
     <TextView
@@ -70,8 +76,9 @@
             android:layout_height="100dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            android:onClick="changeCurrentHack"
             android:scaleType="centerInside"
-            android:src="@mipmap/hack_ptw_chosen" />
+            android:src="@mipmap/hack_ptw" />
 
         <ImageView
             android:id="@+id/hacks_handshake"
@@ -79,8 +86,9 @@
             android:layout_height="100dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            android:onClick="changeCurrentHack"
             android:scaleType="centerInside"
-            android:src="@mipmap/hack_handshake_chosen" />
+            android:src="@mipmap/hack_handshake" />
 
         <ImageView
             android:id="@+id/hacks_pixie_dust"
@@ -88,15 +96,16 @@
             android:layout_height="100dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
+            android:onClick="changeCurrentHack"
             android:scaleType="centerInside"
-            android:src="@mipmap/hack_pixie_dust_chosen" />
+            android:src="@mipmap/hack_pixie_dust" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -110,6 +119,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:layout_marginRight="8dp"
+                android:onClick="startBlackout"
                 android:src="@mipmap/blackout" />
 
             <TextView
@@ -117,11 +127,13 @@
                 style="@style/PerksTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="startBlackout"
                 android:text="@string/perk_blackout" />
 
         </LinearLayout>
 
-        <LinearLayout
+        <!-- Add it in future "perks" version
+        LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="8dp"
@@ -140,9 +152,9 @@
                 style="@style/PerksTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/perk_chems" />
+                android:text="@string/perk_chems" / >
 
-        </LinearLayout>
+        </LinearLayout -->
 
     </LinearLayout>
 

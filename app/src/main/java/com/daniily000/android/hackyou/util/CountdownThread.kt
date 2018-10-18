@@ -9,6 +9,9 @@ package com.daniily000.android.hackyou.util
  * @param interval intervals in ms to call CountdownThread.OnTimerEventCallback#onTimerChanged(Long). 1000 by default
  */
 // TODO: Add pausing mechanism
+// TODO: Rewrite as AsyncTask?
+// TODO: Deprecate to use android.os.CountDownTimer instead?
+@Deprecated("Use android.os.CountDownTimer instead")
 class CountdownThread(private var time: Long, private var interval: Long): Thread() {
 
     constructor(time: Long): this(time, 1000)
@@ -16,8 +19,6 @@ class CountdownThread(private var time: Long, private var interval: Long): Threa
     private var onTimerEventCallback: OnTimerEventCallback? = null
 
     override fun run() {
-        super.run()
-
 
         while (interval <= time) {
             try {
