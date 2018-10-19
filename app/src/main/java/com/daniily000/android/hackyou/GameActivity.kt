@@ -84,19 +84,46 @@ class GameActivity : AppCompatActivity() {
 
         // get name and time
         val preGameDialog = object : Dialog(this) {
-            override fun onCreate(savedInstanceState: Bundle?) {
-                super.onCreate(savedInstanceState)
+            override fun onStart() {
+                super.onStart()
                 pre_game_proceed_button.setOnClickListener {
-                    name = pre_game_name.text.toString()
+
+                    pre_game_name_label.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccentDark, null))
+                    pre_game_time_label.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccentDark, null))
+
+                    var canStart = true
+                    if (pre_game_name.text.toString() == "") {
+                        canStart = false
+                        pre_game_name_label.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccentDarkComplementary, null))
+                    } else {
+                        name = pre_game_name.text.toString()
+                    }
+                    if (pre_game_time.text.toString() == "") {
+                        canStart = false
+                        pre_game_time_label.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccentDarkComplementary, null))
+                    }
                     try {
                         time = pre_game_time.text.toString().toLong() * 1000
                         currentTime = time
+                        if (time <= 0) {
+                            canStart = false
+                            pre_game_time_label.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccentDarkComplementary, null))
+                        }
+                    } catch (e: NumberFormatException) {
+                        canStart = false
+                        pre_game_time_label.setTextColor(ResourcesCompat.getColor(resources, R.color.colorAccentDarkComplementary, null))
+                    }
+
+                    if (canStart) {
                         startGame()
                         this.cancel()
-                    } catch (e: NumberFormatException) {
-
                     }
                 }
+            }
+
+            override fun onBackPressed() {
+                super.onBackPressed()
+                finish()
             }
         }
         preGameDialog.setContentView(R.layout.pre_game_dialog)
@@ -201,6 +228,11 @@ class GameActivity : AppCompatActivity() {
                 post_game_finish_button.setOnClickListener {
                     finish()
                 }
+            }
+
+            override fun onBackPressed() {
+                super.onBackPressed()
+                finish()
             }
         }
         postGameDialog.setContentView(R.layout.post_game_dialog)
