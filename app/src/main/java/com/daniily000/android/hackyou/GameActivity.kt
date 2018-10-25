@@ -9,7 +9,8 @@ import android.view.MotionEvent.ACTION_DOWN
 import android.view.MotionEvent.ACTION_UP
 import android.view.View
 import android.widget.ImageView
-import com.daniily000.android.hackyou.gamelogic.*
+import com.daniily000.android.hackyou.gamelogic.HackMethod
+import com.daniily000.android.hackyou.gamelogic.HackableObject
 import kotlinx.android.synthetic.main.activity_game.*
 import kotlinx.android.synthetic.main.post_game_dialog.*
 import kotlinx.android.synthetic.main.pre_game_dialog.*
@@ -27,7 +28,7 @@ class GameActivity : AppCompatActivity() {
 
     private var isActivityPresent = false
 
-    private var viewToHackMap: MutableMap<View, HackBase> = HashMap()
+    private var viewToHackMap: MutableMap<View, HackMethod> = HashMap()
     private var viewSourcesMap: MutableMap<View, Pair<Int, Int>> = HashMap()
 
     private var name: String = DEFAULT_NAME
@@ -35,8 +36,8 @@ class GameActivity : AppCompatActivity() {
     private var currentTime = time
     private var pts = 0
     private var multiplier = 1
-    private var currentHack: HackBase = HackPtw()
-    private var currentObject: HackableBase = HackableWep()
+    private var currentHack: HackMethod = HackMethod.values()[0]
+    private var currentObject: HackableObject = HackableObject.values()[0]
     private var playing = false
     private var countDownTimer: CountDownTimer? = null
 
@@ -44,11 +45,11 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        viewToHackMap = object : HashMap<View, HackBase>() {
+        viewToHackMap = object : HashMap<View, HackMethod>() {
             init {
-                put(hacks_ptw, HackPtw())
-                put(hacks_handshake, HackHandshakeCapture())
-                put(hacks_pixie_dust, HackPixieDust())
+                put(hacks_ptw, HackMethod.PTW)
+                put(hacks_handshake, HackMethod.HNDSHK_CAP)
+                put(hacks_pixie_dust, HackMethod.PIXIE_DUST)
             }
         }
 
@@ -157,7 +158,7 @@ class GameActivity : AppCompatActivity() {
 
     /** Changes current hack object to a random one. Resets the progress bar */
     fun changeHackTarget() {
-        currentObject = HackableObjects.generate()
+        currentObject = HackableObject.generate()
         hacking_progress_bar.progress = 0
         hacking_progress_bar.max = currentObject.hack(currentHack) ?: 1;
         refreshCurrentHackableObjectView()
@@ -195,7 +196,7 @@ class GameActivity : AppCompatActivity() {
     }
 
     fun refreshCurrentHackableObjectView() {
-        hackable_object_text_view.text = currentObject.name
+        hackable_object_text_view.text = currentObject.displayName
     }
 
     fun startGame() {
@@ -289,10 +290,6 @@ class GameActivity : AppCompatActivity() {
         current_time_text_view.setTextColor(ResourcesCompat.getColor(getResources(), R.color.colorAccentDarkComplementary, null))
 
         countDownTimer.start()
-    }
-
-    fun startSlowCountdown() {
-
     }
 }
 
