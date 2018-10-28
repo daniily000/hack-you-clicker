@@ -1,6 +1,6 @@
 package com.daniily000.android.hackyou.gamelogic
 
-enum class HackableObject() {
+enum class HackableObject {
 
     WEP {
         val CLICKS = 4

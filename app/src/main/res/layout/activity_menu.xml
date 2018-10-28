@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.daniily000.android.hackyou.MenuActivity">
+    tools:context="com.daniily000.android.hackyou.activity.MenuActivity">
 
     <ImageView
         android:id="@+id/background_image_view"

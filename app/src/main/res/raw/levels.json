@@ -1,0 +1,41 @@
+{
+  "chapters": [
+    {
+      "chapterNameResName": "chapter_1_name",
+      "levels": [
+        {
+          "points": 1000,
+          "time": 15,
+          "levelModel": [
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP",
+            "WEP"
+          ]
+        },
+        {
+          "points": 1200,
+          "time": 20,
+          "levelModel": [
+            "WEP",
+            "WEP",
+            "WPA",
+            "WPA",
+            "WPA_WPS",
+            "WPA_WPS",
+            "WEP",
+            "WPA_WPS",
+            "WPA",
+            "WPA_WPS"
+          ]
+        }
+      ]
+    }
+  ]
+}

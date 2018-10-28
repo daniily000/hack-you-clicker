@@ -15,4 +15,7 @@
     <string name="pre_game_dialog_label_name">"Имя: "</string>
     <string name="pre_game_dialog_label_time">"Время: "</string>
     <string name="pre_game_dialog_button_start">Старт</string>
+    <string name="chapter_1_name">Могут ли люди летать?</string>
+    <string name="chapter_label">"Глава "</string>
+    <string name="level_label">"Уровень "</string>
 </resources>

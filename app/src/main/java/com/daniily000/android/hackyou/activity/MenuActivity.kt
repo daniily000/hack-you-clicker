@@ -1,9 +1,10 @@
-package com.daniily000.android.hackyou
+package com.daniily000.android.hackyou.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.daniily000.android.hackyou.R
 
 class MenuActivity : AppCompatActivity() {
 
@@ -13,6 +14,6 @@ class MenuActivity : AppCompatActivity() {
     }
 
     fun launchGame(v: View) {
-        startActivity(Intent(this, GameActivity::class.java))
+        startActivity(Intent(this, ChapterManagerActivity::class.java))
     }
 }

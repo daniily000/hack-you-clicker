@@ -1,4 +1,4 @@
-package com.daniily000.android.hackyou
+package com.daniily000.android.hackyou.activity
 
 import android.app.Dialog
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.MotionEvent.ACTION_DOWN
 import android.view.MotionEvent.ACTION_UP
 import android.view.View
 import android.widget.ImageView
+import com.daniily000.android.hackyou.R
 import com.daniily000.android.hackyou.gamelogic.HackMethod
 import com.daniily000.android.hackyou.gamelogic.HackableObject
 import kotlinx.android.synthetic.main.activity_game.*

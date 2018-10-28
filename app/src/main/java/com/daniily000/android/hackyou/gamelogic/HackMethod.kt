@@ -6,7 +6,7 @@ enum class HackMethod {
         override val readableName = "Pychkine-Tews-Weinmann WEP attack"
     },
     HNDSHK_CAP {
-        override val readableName = "Hanshake capture, decrypt and brutforce WPA/WPA2 PSK attack"
+        override val readableName = "Handshake capture, decrypt and brutforce WPA/WPA2 PSK attack"
     },
     PIXIE_DUST {
         override val readableName = "Pixie Dust WPS attack"

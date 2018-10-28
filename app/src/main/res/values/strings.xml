@@ -17,4 +17,7 @@
     <string name="pre_game_dialog_label_name">"Name: "</string>
     <string name="pre_game_dialog_label_time">"Time: "</string>
     <string name="pre_game_dialog_button_start">Start</string>
+    <string name="chapter_1_name">Can people fly?</string>
+    <string name="chapter_label">"Chapter "</string>
+    <string name="level_label">"Level "</string>
 </resources>
